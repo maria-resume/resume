@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мария — Администратор / Офис-ассистент</title>
+  <meta name="description" content="Мария — администратор / офис-ассистент: MS Office, базовый Excel, 1С (база), документы, сервис, ресепшен. Санкт-Петербург. Готова приступить быстро." />
+
+  <!-- Open Graph (красивый превью-блок при отправке ссылки) -->
+  <meta property="og:title" content="Мария — Администратор / Офис-ассистент" />
+  <meta property="og:description" content="MS Office, Excel (база), 1С (база), документы, ресепшен и клиентский сервис. Санкт-Петербург. Готова приступить быстро." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0a0f1f;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.04);
+      --text:#eef1ff;
+      --muted:#b9c2ff;
+      --accent:#7aa2ff;
+      --accent2:#58e0a2;
+      --line:rgba(255,255,255,.10);
+      --chip:rgba(122,162,255,.14);
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 800px at 15% 5%, rgba(122,162,255,.22), transparent 60%),
+        radial-gradient(900px 700px at 90% 15%, rgba(88,224,162,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:1020px; margin:0 auto; padding:26px 18px 70px;}
+    .topbar{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+      margin-bottom:14px;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:.2px;
+      user-select:none;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(122,162,255,.12);
+    }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .nav a{
+      text-decoration:none;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .card{
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    header{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:16px;
+      margin-top:8px;
+    }
+
+    h1{margin:0 0 6px; font-size:30px; letter-spacing:.2px}
+    .role{color:var(--muted); font-weight:700}
+    .subtitle{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .pill{
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-size:13px;
+      color:var(--muted);
+    }
+    .pill.ok{
+      border-color: rgba(88,224,162,.35);
+      background: rgba(88,224,162,.16);
+      color:#d9ffe9;
+      font-weight:700;
+    }
+    .pill.accent{
+      border-color: rgba(122,162,255,.35);
+      background: rgba(122,162,255,.14);
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .hr{height:1px; background:var(--line); margin:16px 0}
+
+    h2{margin:0 0 10px; font-size:16px; letter-spacing:.2px}
+    h3{margin:0 0 8px; font-size:14px; color:var(--text)}
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      margin-top:16px;
+    }
+
+    .chips{display:flex; flex-wrap:wrap; gap:8px}
+    .chip{
+      background:var(--chip);
+      border:1px solid rgba(122,162,255,.22);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:12px;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .list{margin:10px 0 0; padding-left:18px}
+    .list li{margin:6px 0}
+
+    .cta{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(122,162,255,.35);
+      background: rgba(122,162,255,.14);
+      text-decoration:none;
+      font-weight:800;
+      font-size:14px;
+    }
+    .btn.secondary{
+      border-color: rgba(255,255,255,.14);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:700;
+    }
+    .btn.green{
+      border-color: rgba(88,224,162,.35);
+      background: rgba(88,224,162,.16);
+    }
+
+    .kv{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    .kv .item{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:10px 12px;
+      background: rgba(255,255,255,.03);
+    }
+    .kv .k{color:var(--muted); font-size:12px; margin-bottom:4px}
+    .kv .v{font-weight:800}
+
+    .xp{
+      border-top:1px solid var(--line);
+      margin-top:12px;
+      padding-top:12px;
+    }
+    .xp:first-of-type{border-top:none; margin-top:0; padding-top:0}
+    .xp-title{
+      display:flex; flex-wrap:wrap;
+      gap:8px;
+      align-items:baseline;
+      justify-content:space-between;
+    }
+    .xp-title strong{font-size:14px}
+    .badge{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:4px 8px;
+      background:rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+
+    .callout{
+      border:1px solid rgba(88,224,162,.25);
+      background: rgba(88,224,162,.10);
+      border-radius:16px;
+      padding:12px 12px;
+    }
+
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      opacity:.95;
+    }
+
+    @media (max-width:900px){
+      header{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .kv{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Резюме-сайт</div>
+      <nav class="nav" aria-label="Навигация">
+        <a href="#skills">Навыки</a>
+        <a href="#experience">Опыт</a>
+        <a href="#value">Чем полезна</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+
+    <header>
+      <section class="card">
+        <h1>Мария</h1>
+        <div class="role">Администратор / Офис-ассистент</div>
+        <div class="subtitle">
+          MS Office (Word/Excel), базовый 1С, документы и сервис. Спокойно общаюсь с людьми, аккуратно веду задачи.
+        </div>
+
+        <div class="pillrow">
+          <div class="pill">Санкт-Петербург</div>
+          <div class="pill">21 год</div>
+          <div class="pill ok">Готова выйти в ближайшие дни</div>
+          <div class="pill accent">Ориентир по ЗП: от 70 000 ₽</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Коротко обо мне</h2>
+        <div class="muted">
+          Ищу стабильную работу администратором/офис-ассистентом (офис, клиника, салон, сервис).
+          Умею работать с документами и первичкой, уверенно пользуюсь Word/Excel, есть базовая практика в 1С.
+          Есть опыт клиентского сервиса (касса, консультации) — умею сохранять вежливый тон и порядок даже при нагрузке.
+        </div>
+
+        <div class="kv">
+          <div class="item">
+            <div class="k">Сильные стороны</div>
+            <div class="v">аккуратность • ответственность • обучаемость</div>
+          </div>
+          <div class="item">
+            <div class="k">Что ищу</div>
+            <div class="v">официально / стабильный график / долгосрочно</div>
+          </div>
+        </div>
+
+    <div class="cta" id="contacts">
+  <a class="btn" href="tel:+79214161223">📞 +7 (921) 416-12-23</a>
+  <a class="btn secondary" href="mailto:Marusikfom@gmail.com">✉️ Marusikfom@gmail.com</a>
+  <a class="btn green"
+     href="https://spb.hh.ru/resume/3b58825aff0febe9340039ed1f4b62506e4131"
+     target="_blank" rel="noopener">
+     🔗 Резюме на hh.ru
+  </a>
+</div>
+
+      </section>
+
+      <aside class="card">
+        <h2 id="skills">Ключевые навыки</h2>
+        <div class="chips">
+          <div class="chip">Word — документы</div>
+          <div class="chip">Excel — таблицы (база)</div>
+          <div class="chip">1С — базово</div>
+          <div class="chip">Документы / первичка</div>
+          <div class="chip">Ресепшен / звонки</div>
+          <div class="chip">Касса / терминал</div>
+          <div class="chip">Сервис и клиенты</div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Какие задачи закрываю</h2>
+        <ul class="list muted">
+          <li>встреча клиентов, запись/консультации, обработка обращений</li>
+          <li>входящие звонки/мессенджеры, передача информации</li>
+          <li>оформление и ведение документов, чеков, накладных</li>
+          <li>порядок в офисе/на ресепшен, контроль текущих поручений</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Формат работы</h2>
+        <ul class="list muted">
+          <li>График: 2/2 или 5/2</li>
+          <li>Локация: удобно около м. Пионерская (и рядом)</li>
+          <li>Официальное оформление — желательно</li>
+        </ul>
+      </aside>
+    </header>
+
+    <div class="grid">
+      <section class="card" id="experience">
+        <h2>Опыт</h2>
+
+        <div class="xp">
+          <div class="xp-title">
+            <strong>Заместитель управляющего (краткий опыт)</strong>
+            <span class="badge">~1 месяц</span>
+          </div>
+          <ul class="list muted">
+            <li>Помощь в организации работы смены</li>
+            <li>Контроль текущих задач и дисциплины</li>
+            <li>Коммуникация с персоналом и клиентами</li>
+          </ul>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">
+            <strong>Оператор / помощник по учёту (1С) — неофициально</strong>
+            <span class="badge">~3 месяца</span>
+          </div>
+          <ul class="list muted">
+            <li>Ведение чеков и накладных, ввод данных</li>
+            <li>Работа с первичной документацией</li>
+          </ul>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">
+            <strong>Продавец-кассир (разные магазины)</strong>
+            <span class="badge">3 места × до 3 месяцев</span>
+          </div>
+          <ul class="list muted">
+            <li>Касса, наличные/безнал, возвраты</li>
+            <li>Консультации покупателей</li>
+            <li>Контроль сроков годности, порядок в зале</li>
+          </ul>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">
+            <strong>Кальянщик — неофициально</strong>
+            <span class="badge">~6 месяцев</span>
+          </div>
+          <ul class="list muted">
+            <li>Сервис и общение с гостями</li>
+            <li>Соблюдение чистоты и санитарных норм</li>
+          </ul>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">
+            <strong>Копирайтер (удалённо) — неофициально</strong>
+            <span class="badge">подработка</span>
+          </div>
+          <ul class="list muted">
+            <li>Тексты по ТЗ, работа с правками</li>
+            <li>Соблюдение сроков</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section class="card" id="value">
+        <h2>Чем буду полезна работодателю</h2>
+
+        <div class="callout">
+          <h3>Ставка на надёжность и порядок</h3>
+          <div class="muted small">
+            Мне важно, чтобы офис/ресепшен работал спокойно и без “потерь”: заявки фиксируются,
+            документы в порядке, клиентам отвечают вовремя, задачи не забываются.
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <h2>Образование</h2>
+        <div class="muted">
+          <strong>Среднее специальное</strong> — Повар-кондитер
+        </div>
+        <ul class="list muted">
+          <li>Санитарные нормы, хранение и сроки годности</li>
+          <li>Работа по рецепту, дисциплина и аккуратность</li>
+        </ul>
+
+        <div class="hr"></div>
+
+        <h2>Ссылка для hh.ru</h2>
+     <div class="muted">
+  <a href="https://spb.hh.ru/resume/3b58825aff0febe9340039ed1f4b62506e4131"
+     target="_blank" rel="noopener"
+     style="text-decoration:underline;">
+     👉 Открыть резюме на hh.ru
+  </a>
+</div>
+
+
+        <footer>
+          Последнее обновление: <span id="upd"></span>
+        </footer>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Автодата обновления (можно убрать)
+    const d = new Date();
+    const fmt = new Intl.DateTimeFormat('ru-RU', { day:'2-digit', month:'long', year:'numeric' });
+    document.getElementById('upd').textContent = fmt.format(d);
+  </script>
+</body>
+</html>
