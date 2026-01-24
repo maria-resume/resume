@@ -40,6 +40,81 @@
       color:var(--text);
       line-height:1.55;
     }
+/* Portfolio */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:12px;
+}
+@media (max-width:900px){
+  .gallery{ grid-template-columns: 1fr; }
+}
+.ph{
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background: rgba(255,255,255,.65);
+  box-shadow: var(--shadow);
+}
+.ph img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+.ph .cap{
+  padding:10px 12px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+}
+.ph .cap strong{
+  color:var(--text);
+  font-weight:900;
+}
+
+/* Lightbox */
+.lb{
+  position:fixed;
+  inset:0;
+  background: rgba(20,10,8,.72);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  z-index:9999;
+}
+.lb.open{ display:flex; }
+.lb .box{
+  max-width:980px;
+  width:100%;
+  background: rgba(255,255,255,.92);
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+.lb img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.lb .bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 12px;
+  color:var(--muted);
+  font-weight:800;
+}
+.lb button{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.75);
+  border-radius:12px;
+  padding:8px 10px;
+  font-weight:900;
+  cursor:pointer;
+}
 
     a{color:inherit}
     .wrap{max-width:1020px; margin:0 auto; padding:26px 18px 70px;}
@@ -348,6 +423,38 @@
         </ul>
       </aside>
     </header>
+<section class="card" id="portfolio">
+  <h2>Портфолио</h2>
+  <div class="muted small" style="margin-bottom:10px">
+    Примеры работ: оформление, декор, подача. Готова выполнить тестовое задание.
+  </div>
+
+  <div class="gallery">
+    <figure class="ph">
+      <img src="images/cake-berries.jpg" alt="Торт с ягодами" data-cap="Торт с ягодным декором — оформление и подача" />
+      <figcaption class="cap"><strong>Торт с черничным кремом</strong><br/>Оформление и подача</figcaption>
+    </figure>
+
+    <figure class="ph">
+      <img src="images/cheesecake-almond.jpg" alt="Чизкейк/пирог с миндальными лепестками" data-cap="Чизкейк/пирог — выпечка и оформление (миндальные лепестки)" />
+      <figcaption class="cap"><strong>Шарлотка пирог</strong><br/>Выпечка и оформление</figcaption>
+    </figure>
+
+    <figure class="ph">
+      <img src="images/dessert-portion.jpg" alt="Порционный десерт" data-cap="Порционный десерт — подача и декор ягодами" />
+      <figcaption class="cap"><strong>Бенто торт "Сникерс"</strong><br/>Подача и декор</figcaption>
+    </figure>
+ <figure class="ph">
+  <img src="images/dessert.jpg"
+       alt="Торт Рафаэлло"
+       data-cap="Торт «Рафаэлло» — сборка, крем, оформление и разрез" />
+  <figcaption class="cap">
+    <strong>Торт «Рафаэлло»</strong><br/>
+    Сборка и оформление (разрез)
+  </figcaption>
+</figure>
+  </div>
+</section>
 
     <div class="grid">
       <section class="card" id="experience">
